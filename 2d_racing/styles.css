@@ -24,14 +24,14 @@ html, body {
     height: 50px;
 }
 .track {
-    position: absolute;
-    left: 0;
-    /*right: 0;
-    margin: auto;*/
+    position: fixed;
+    left: calc(50% - 1000px);
+    top: calc(50% - 500px);
 }
 #car {
-    position: absolute;
-    left: 0;
+    position: fixed;
+    left: calc(50% - 20px);
+    top: calc(50% - 10px);
 }
 .controler-button {
     position: fixed;

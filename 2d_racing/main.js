@@ -24,14 +24,12 @@ class Car {
             'left': null,
             'right': null
         };
-        this.x = 1000 - (window.innerWidth/2);
-        this.y = 500 - (window.innerHeight/2);
+        this.x = 0;
+        this.y = 0;
         this.windowCenter = [
             (window.innerWidth/2) - (this.car.width/2),
             (window.innerHeight/2) - (this.car.height/2)
         ];
-        this.lastWindowWidth = window.innerWidth;
-        this.lastWindowHeight = window.innerHeight;
         this.trackImage = new Image();
         this.trackImage.src = 'images/track.png';
         this.initInterval();        
@@ -60,7 +58,7 @@ class Car {
         this.y += this.speed*Math.sin(this.angle);
 
         this.track.style.transform = `translate(${-this.x}px, ${-this.y}px)`;
-        this.car.style.transform = `translate(${this.windowCenter[0]}px, ${this.windowCenter[1]}px) rotate(${this.driftAngle}rad)`;
+        this.car.style.transform = `rotate(${this.driftAngle}rad)`;
 
         if (this.pressedKeys['left']) { // 4 6
             if (this.speed > this.minDriftSpeed) {
@@ -178,18 +176,6 @@ if (supportsTouch) {
         });
     }
 }
-
-window.addEventListener("resize", (event) => {
-    car.windowCenter = [
-        (window.innerWidth/2) - (car.car.width/2),
-        (window.innerHeight/2) - (car.car.height/2)
-    ];
-    car.x -= (window.innerWidth - car.lastWindowWidth)/2;
-    car.y -= (window.innerHeight - car.lastWindowHeight)/2;
-
-    car.lastWindowWidth = window.innerWidth;
-    car.lastWindowHeight = window.innerHeight;
-});
 
 clearButton.addEventListener('click', (event) => {
     car.clearBackground();
