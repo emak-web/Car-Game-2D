@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    
+    -webkit-touch-callout: none; /* Safari */
+    -webkit-user-select: none; /* Chrome */     
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; 
+}
+html, body {
+    background-color: #aaa;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    touch-action: none;
+    /*margin: 0 auto;*/
+}
+.arrow {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
+}
+.track {
+    position: absolute;
+    left: 0;
+    /*right: 0;
+    margin: auto;*/
+}
+#car {
+    position: absolute;
+    left: 0;
+}
+.controler-button {
+    position: fixed;
+    background-color: #fff;
+    color: #000;
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    border: none;
+    display: none;
+}
+#left {
+    bottom: 10px;
+    left: 10px;
+}
+#right {
+    bottom: 10px;
+    left: 90px;
+    transform: rotate(180deg);
+}
+#forward {
+    bottom: 10px;
+    right: 90px;
+    transform: rotate(90deg);
+}
+#backward {
+    bottom: 10px;
+    right: 10px;
+    transform: rotate(-90deg);
+}
+#background {
+    background-color: #888
+}
+#settings-button {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    border: none;
+}
+#clear-button {
+    position: fixed;
+    color: #000;
+    top: 10px;
+    left: 10px;
+    background-color: #fff;
+    width: 100px;
+    height: 50px;
+    border-radius: 20px;
+    border: none;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
